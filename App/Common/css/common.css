@@ -1,0 +1,123 @@
+body {
+  background-color: #fffef9;
+  font-family: "Arial,Helvetica,sans-serif";
+  font-size: 10px;
+  font-weight: 400;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+#headerWrap {
+  width: 100%;
+}
+#headerWrap #loginBox {
+  text-align: right;
+  margin-top: 40px;
+  padding-right: 100px;
+  position: relative;
+  cursor: pointer;
+}
+#headerWrap #loginProfile {
+  display: inline-flex;
+}
+#headerWrap #loginLetter {
+  color: #0d2123;
+  margin-top: 10px;
+  font-family: "sans-serif";
+  font-size: 14px;
+  padding: 0px 7px;
+  float: right;
+  display: inline-flex;
+}
+#headerWrap #headline {
+  color: #4d4d4d;
+  width: 90%;
+  margin-top: 5px;
+}
+#headerWrap #titleBox {
+  text-align: left;
+  display: inline-flex;
+  margin-left: 5%;
+  width: 80%;
+  min-width: 800px;
+}
+#headerWrap #logo {
+  width: 100px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+#headerWrap #title {
+  color: #404748;
+  font-family: "바탕";
+  font-size: 28px;
+  margin: 40px 10px 10px 0px;
+  cursor: pointer;
+  width: 20%;
+  min-width: 500px;
+}
+
+#headerWrap #title span {
+  font-family: "Helvetica";
+  font-weight: bold;
+  margin-left: 10px;
+}
+#headerWrap #menuTab {
+  width: 25%;
+  position: absolute;
+  text-align: right;
+  display: inline-flex;
+  cursor: pointer;
+  margin-left: 67%;
+  margin-top: 40px;
+  min-width: 400px;
+  overflow: hidden;
+}
+#headerWrap #menuTab li {
+  display: inline;
+  color: #264346;
+  font-family: "montserrat, sans-serif";
+  font-size: 14px;
+  padding: 0px 10px;
+  width: fit-content;
+}
+#headerWrap #menuTab #historyTab {
+}
+#headerWrap #menuTab #moreList {
+  display: inline-block;
+  position: relative;
+  float: right;
+  margin-top: 0px;
+  margin-left: -35px;
+  min-height: 200px;
+  text-align: right;
+  max-width: 100px;
+  padding-left: 0px;
+}
+#headerWrap #moreTab {
+  margin-bottom: 20px;
+}
+#headerWrap .popupMenu {
+  visibility: hidden;
+  position: relative;
+  margin-bottom: 10px;
+  width: 80px;
+}
+#contentWrap {
+  min-height: 1000px;
+  margin-top: 150px;
+  margin-left: 100px;
+}
+#footerWrap {
+  text-align: center;
+  margin: 50px;
+  font-size: 14px;
+}
+#footerWrap .snsIcon {
+  width: 20px;
+  padding: 3px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+#footerWrap #copyright {
+  color: #2f3c3dee;
+}
