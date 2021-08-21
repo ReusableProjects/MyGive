@@ -109,6 +109,7 @@ body {
 }
 #contentWrap #contactUsDiv {
   text-align: center;
+  margin-top: 15%;
 }
 #contentWrap #contactUsDiv #contactUscheckMark {
   width: 50px;

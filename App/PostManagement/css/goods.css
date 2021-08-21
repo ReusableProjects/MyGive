@@ -45,9 +45,6 @@
   width: 40%;
   margin-bottom: 5%;
 }
-#goodsLookDiv .goodsBlock:last-child {
-  margin-bottom: 15%;
-}
 #goodsLookDiv .goodsBlockLeft {
   margin-left: 5%;
 }

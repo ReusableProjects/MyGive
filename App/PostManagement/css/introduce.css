@@ -1,0 +1,58 @@
+.middleTitle {
+  font-family: "바탕";
+  font-size: 40px;
+}
+#helloIntroduceDiv {
+  text-align: center;
+  margin-top: -5%;
+  margin-bottom: 20%;
+}
+#helloIntroduceDiv #helloIntroduceText {
+  font-size: 15px;
+}
+#growthBackgroundDiv #dataAnalysis {
+  width: 500px;
+  margin-left: 15%;
+}
+#growthBackgroundDiv #ExplainDiv {
+  margin-top: -25%;
+  margin-left: 55%;
+}
+#growthBackgroundDiv #ExplainText {
+  font-size: 15px;
+  color: rgb(55, 55, 55);
+  line-height: 30px;
+}
+
+#participatingCompanies {
+  text-align: center;
+  margin-top: 15%;
+}
+#participatingCompanies #participateTitle {
+  position: relative;
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom: 15%;
+  align-content: center;
+}
+#participatingCompanies #participatingCompanyBlock {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+#participatingCompanies .companyImg {
+  width: 25%;
+  height: 320px;
+  clear: both;
+}
+#participatingCompanies .companyTextDiv {
+  background-color: #122123;
+  width: 25%;
+  height: 320px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+#participatingCompanies .companyText {
+  margin-top: 35%;
+}
