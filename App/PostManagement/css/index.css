@@ -1,1 +1,94 @@
-
+#bannerDiv {
+  margin-top: -7%;
+  background-color: rgb(212, 212, 212);
+  width: 100%;
+  height: 500px;
+  border: none;
+  margin-bottom: 10%;
+}
+#bannerDiv #bannerImg {
+  position: relative;
+  margin-left: 10%;
+  margin-top: 1%;
+  width: 80%;
+  height: 90%;
+  border-radius: 5px;
+  box-shadow: 10px 10px 5px 5px rgb(111, 111, 111);
+}
+#bannerDiv #bannerPositionBox {
+  position: relative;
+  z-index: 1000;
+  display: flex;
+  margin-left: 48%;
+  margin-top: -3%;
+}
+#bannerDiv .bannerPosition {
+  background-color: rgb(139, 139, 139);
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  margin: 5px;
+}
+#bannerDiv #bannerPosition1 {
+  background-color: white;
+}
+#bannerDiv .bannerMoveButton {
+  position: relative;
+  z-index: 10000;
+  margin-top: -14%;
+}
+#bannerDiv #bannerMoveButtonLeft {
+  margin-left: 2%;
+  float: left;
+}
+#bannerDiv #bannerMoveButtonRight {
+  margin-right: 2%;
+  float: right;
+}
+#helloMainDiv #helloMainTextBox {
+  text-align: center;
+  line-height: 30px;
+}
+#helloMainDiv #helloMainText1 {
+  font-family: "바탕";
+  font-size: 72px;
+}
+#helloMainDiv #helloMainText2 {
+  font-size: 20px;
+  margin-bottom: 35px;
+}
+#helloMainDiv #helloMainText3 {
+  font-size: 15px;
+  margin-bottom: 35px;
+}
+#helloMainDiv #helloMainImg {
+  width: 45%;
+  margin-bottom: 50px;
+}
+#serviceMainDiv {
+  margin-top: 50px;
+  margin-bottom: 250px;
+}
+#serviceMainDiv #serviceMainImg {
+  position: relative;
+  width: 100%;
+  z-index: 10;
+  filter: brightness(75%);
+}
+#serviceMainDiv #serviceMainTextBox {
+  color: white;
+  text-align: center;
+  margin-top: -20%;
+}
+#serviceMainDiv #serviceMainTitle {
+  position: relative;
+  z-index: 1000;
+}
+#serviceMainDiv #serviceMainText {
+  position: relative;
+  z-index: 1000;
+  font-size: 18px;
+}
+#serviceMainDiv #serviceBlockButton2 {
+  width: 120px;
+}

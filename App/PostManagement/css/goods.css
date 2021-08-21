@@ -9,7 +9,7 @@
 #helloGoodsDiv #helloGoodsTextBox {
   position: relative;
   margin-top: -29%;
-  margin-bottom: 20%;
+  margin-bottom: 15%;
   z-index: 10000;
   text-align: center;
   color: white;
@@ -39,47 +39,4 @@
 }
 #helloGoodsDiv #helloGoodsText3 {
   font-size: 15px;
-}
-
-#goodsLookDiv .goodsBlock {
-  width: 40%;
-  margin-bottom: 5%;
-}
-#goodsLookDiv .goodsBlockLeft {
-  margin-left: 5%;
-}
-#goodsLookDiv .goodsBlockRight {
-  margin-left: 55%;
-}
-#goodsLookDiv .goodsBlockImg {
-  position: relative;
-  width: 100%;
-  filter: brightness(78%);
-}
-#goodsLookDiv .goodsBlockName {
-  position: relative;
-  margin-top: -42%;
-  text-align: center;
-  z-index: 1000;
-  color: white;
-  font-size: 22px;
-  font-family: "바탕";
-}
-#goodsLookDiv .goodsBlockButton {
-  position: relative;
-  margin-top: 9%;
-  margin-left: 43%;
-  z-index: 1000;
-  color: white;
-  font-size: 15px;
-  width: 100px;
-  height: 32px;
-  background-color: #122123;
-  padding-top: 12px;
-  text-align: center;
-  width: 100px;
-}
-#goodsLookDiv .goodsBlockButton:hover {
-  background: #12212378;
-  transition: background 0.8s ease-out;
 }

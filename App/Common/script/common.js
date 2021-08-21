@@ -1,42 +1,42 @@
 $(document).ready(function(){
-    $('#loginLetter').hover(function(){
+    $('#headerWrap #loginLetter').hover(function(){
         $('#loginLetter').css('color', 'gray');
     });
-    $('#loginBox').hover(function(){
+    $('#headerWrap #loginBox').hover(function(){
         $('#loginLetter').css('color', '#0d2123');
     });
-    $('#loginBox').click(function(){
+    $('#headerWrap #loginBox').click(function(){
         window.location.href="../../MemberManagement/html/login.html";
     });
-    $('#logo').click(function(){
+    $('#headerWrap #logo').click(function(){
         window.location.href="../../PostManagement/html/index.html";
     });
-    $('#title').click(function(){
+    $('#headerWrap #title').click(function(){
         window.location.href="../../PostManagement/html/index.html";
     });
 
-    $('#homeTab').click(function(){
+    $('#headerWrap #homeTab').click(function(){
         window.location.href="../../PostManagement/html/index.html";
     });
-    $('#introduceTab').click(function(){
+    $('#headerWrap #introduceTab').click(function(){
         window.location.href="../../PostManagement/html/introduce.html";
     });
-    $('#donateTab').click(function(){
+    $('#headerWrap #donateTab').click(function(){
         window.location.href="../../PostManagement/html/donate.html";
     });
-    $('#historyTab').click(function(){
+    $('#headerWrap #historyTab').click(function(){
         window.location.href="../../CardHistoryManagement/html/history.html";
     });
     var popup=false;
-    $('#moreTab').hover(function(){
+    $('#headerWrap #moreTab').hover(function(){
         $('.popupMenu').css('visibility', "visible");
         popup=true;
     });
-    $('#titleBox').hover(function(){
+    $('#headerWrap #titleBox').hover(function(){
         $('.popupMenu').css('visibility', "hidden");
         popup=false;
     });
-    $('#moreTab').click(function(){
+    $('#headerWrap #moreTab').click(function(){
         if(popup==false){
             $('.popupMenu').css('visibility', "visible");
             popup=true;
@@ -46,15 +46,25 @@ $(document).ready(function(){
             popup=false;
         }
     });
-    $('#goodsTab').click(function(){
+    $('#headerWrap #goodsTab').click(function(){
         window.location.href="../../PostManagement/html/goods.html";
     });
-    $('#relayTab').click(function(){
+    $('#headerWrap #relayTab').click(function(){
         window.location.href="../../PostManagement/html/relay.html";
     });
-    $('#FAQTab').click(function(){
+    $('#headerWrap #FAQTab').click(function(){
         window.location.href="../../PostManagement/html/Q&A.html";
     });
+
+    $('#contentWrap #FAQButton').click(function(){
+        window.location.href="../html/Q&A.html";
+     })
+     $('#contentWrap .goodsBlockButton').click(function(){
+         window.open($(this).attr('data'));
+      })
+    $('#contentWrap .serviceBlockButton').click(function(){
+      window.location.href=$(this).attr('data');
+    })
 
     $('#footerWrap #facebookIcon').click(function(){
         window.open("https://facebook.com");
