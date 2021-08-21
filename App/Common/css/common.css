@@ -105,7 +105,21 @@ body {
 #contentWrap {
   min-height: 1000px;
   margin-top: 150px;
-  margin-left: 100px;
+  /* margin-left: 100px; */
+}
+#contentWrap #contactUsDiv {
+  text-align: center;
+}
+#contentWrap #contactUsDiv #contactUscheckMark {
+  width: 50px;
+}
+#contentWrap #contactUsDiv #contactUsHeadline {
+  font-size: 20px;
+  margin-top: 20px;
+}
+#contentWrap #contactUsDiv #contactUsText {
+  font-size: 15px;
+  line-height: 30px;
 }
 #footerWrap {
   text-align: center;
