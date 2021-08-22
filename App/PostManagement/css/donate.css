@@ -1,0 +1,25 @@
+#contentWrap {
+    margin-top: 80px;
+    font-family : Times, "Times New Roman", Georgia, serif;
+    font-size : 40px;
+    text-align: center;
+}
+
+#contentWrap #span1 {
+    font-size : 19px;
+    text-align: center;
+    line-height: 0.2;
+}
+
+#contentWrap #span2 {
+    margin-top:20px;
+    font-size:14px;
+    text-align:center;
+}
+
+#contentWrap1 #coin{
+    width:200px;
+    height:300px;
+    text-align:center;
+    margin-top:60px;
+}
