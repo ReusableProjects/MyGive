@@ -71,6 +71,7 @@ body {
   margin-top: 40px;
   min-width: 400px;
   overflow: hidden;
+  z-index: 100000;
 }
 #headerWrap #menuTab li {
   display: inline;
@@ -101,6 +102,7 @@ body {
   position: relative;
   margin-bottom: 10px;
   width: 80px;
+  box-shadow: 0px 0px 70px #fffef9;
 }
 #contentWrap {
   min-height: 1000px;
