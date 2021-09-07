@@ -10,7 +10,7 @@ var app = http.createServer(function(request,response){
     if (request.method == 'GET') { //get으로 전달된거면 이부분 실행
         if(request.url == '/'){
 
-            url = '/html/index.html';  //기본적으로 index.html이 실행됨
+            url = '/App/PostManagement/html/index.html';  //기본적으로 index.html이 실행됨
         }else if(request.url == '/favicon.ico'){
             response.writeHead(404); //바로가기 아이콘이 없으면 404 리턴
             response.end();
