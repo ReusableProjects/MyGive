@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('li').click(function(){
+    $('#organizaionHistory li').click(function(){
         window.open($(this).attr('data'));
     })
    
