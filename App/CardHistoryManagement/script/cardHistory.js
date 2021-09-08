@@ -40,5 +40,18 @@ $(document).ready(function(){
         if(certificationFlag==false)
             $('#certificationImg').css('visibility', 'hidden');
     })
-   
-})
+  
+    //테이블에 요청 전송
+function send(res){
+    var param = {
+        num : res,
+        ip:ip(),
+    };
+    $.post('/organizationList',param,function(data){ 
+      setTimeout(function(){
+        document.location.href="/App/CardHistoryManagement/html/cardHistory.html";
+      },1700);
+    });
+}
+send(res);
+});
