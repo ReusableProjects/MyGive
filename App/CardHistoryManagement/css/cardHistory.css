@@ -1,0 +1,166 @@
+#contentWrap #helloCardHistoryDiv {
+  text-align: center;
+}
+#helloCardHistoryDiv #historyTitle {
+  margin-top: -5%;
+}
+#helloCardHistoryDiv #helloCardHistoryImg {
+  border: none;
+  border-radius: 100%;
+  margin-top: 0%;
+  margin-bottom: 2%;
+}
+#organizationHistoryDiv {
+  text-align: center;
+}
+#organizationHistoryDiv ul {
+  overflow-y: hidden;
+  overflow-x: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  max-width: 85%;
+}
+#organizationHistoryDiv ul::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+.historyDivClass .historyTitle {
+  font-size: 30px;
+  text-align: left;
+  margin-left: 15%;
+  font-weight: bold;
+
+  width: fit-content;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgb(216, 250, 206);
+}
+.historyDivClass hr {
+  width: 70%;
+  min-width: 500px;
+}
+.historyDivClass .historyLiGroup {
+  display: inline-flex;
+  font-size: 15px;
+}
+#organizationHistoryDiv ul {
+  list-style: none;
+  text-align: left;
+  min-width: 800px;
+  display: inline-flex;
+}
+#organizationHistoryDiv li {
+  border: 1px solid rgb(255, 240, 209);
+  border-radius: 20px;
+  text-align: center;
+  margin: 10px;
+  background-color: rgb(255, 245, 215);
+}
+#organizationHistoryDiv li:hover {
+  background: #ffcd4390;
+  transition: background 0.8s ease-out;
+}
+#organizationHistoryDiv .historyLiTop {
+  margin-top: 10%;
+  margin-bottom: 3%;
+}
+#organizationHistoryDiv .historyLiBottom {
+  margin-bottom: 3%;
+  min-width: 250px;
+}
+#organizationHistoryDiv .organizationImg {
+  width: 75px;
+  height: 70px;
+  border-radius: 100%;
+}
+#organizationHistoryDiv .organizationName {
+  font-size: 20px;
+}
+#organizationHistoryDiv .status {
+  font-size: 10px;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+#organizationHistoryDiv .status1 {
+  background-color: rgb(255, 132, 132);
+  padding: 2px 5px;
+}
+#organizationHistoryDiv .status2 {
+  background-color: rgb(255, 177, 59);
+  padding: 2px 8px;
+}
+#organizationHistoryDiv .status3 {
+  background-color: rgb(254, 255, 171);
+  padding: 2px 8px;
+}
+#organizationHistoryDiv .status4 {
+  background-color: lightgreen;
+  padding: 2px 8px;
+}
+#organizationHistoryDiv .status5 {
+  background-color: rgb(157, 250, 255);
+  padding: 2px 5px;
+}
+#organizationHistoryDiv .homepage {
+  font-size: 15px;
+  background-color: white;
+  border-radius: 30px;
+  padding: 3px 50px;
+  margin-top: -5px;
+}
+#organizationHistoryDiv .homepage:hover {
+  background: #ff161656;
+  transition: background 0.8s ease-out;
+}
+#organizationHistoryDiv .contact {
+  margin-top: 15px;
+  line-height: 30px;
+}
+
+#orderedHistoryDiv {
+  margin-top: 10%;
+  margin-bottom: 15%;
+}
+#orderedHistoryDiv #orderedHistorySelect {
+  margin-left: 15%;
+  font-size: 15px;
+  padding: 5px;
+  background-color: transparent;
+}
+#orderedHistoryDiv #orderedHistorySelect:hover {
+  background-color: rgb(255, 255, 255);
+}
+#orderedHistoryDiv ul {
+  list-style-image: url("../image/cardHistoryListStyle.png");
+  margin-left: 15%;
+  min-width: 1000px;
+  max-height: 570px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+#orderedHistoryDiv ul::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+#orderedHistoryDiv li {
+  border-radius: 10px;
+  margin-top: 50px;
+  min-height: 120px;
+  width: 77%;
+  line-height: 10px;
+  border: 10px double rgba(77, 6, 6, 0.324);
+  background-color: white;
+  margin-left: 30px;
+}
+#orderedHistoryDiv .historyLiLeft {
+  margin-left: 5%;
+  margin-top: -10px;
+  min-height: 120px;
+}
+#orderedHistoryDiv .historyLiRight {
+  margin-top: -110px;
+  margin-left: 50%;
+}
+#orderedHistoryDiv .organizationName {
+  font-size: 20px;
+}
