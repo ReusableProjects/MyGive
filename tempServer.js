@@ -1,9 +1,9 @@
 var http = require('http');
 var fs = require('fs');
-var qs = require('querystring');
 var mysql = require('mysql');
+var url=require('url');
+var userNum=3;
 var app = http.createServer(function(request,response){
-    var url = request.url; //처리하고싶은 url
 
 
     if (request.method == 'GET') { //get으로 전달된거면 이부분 실행
@@ -34,9 +34,11 @@ var app = http.createServer(function(request,response){
         });
 
         request.on('end', function () { //body로 들어온 데이터를 가공하여 객체화시킴
-            var text = request.url.split('/');
-            var method = text[1];
-        
+            if(body!='')
+            { 
+                var text = request.url.split('/');
+                var method = text[1];
+            }
             if(typeof(postMethods[method]) == 'undefined'){ //request.url이 정의되어 있지 않으면
                 response.writeHead(404); //404에러 출력
                 response.end();
@@ -63,9 +65,13 @@ var connInfo = {//더미로 넣은 계정이 아닌 mysql계정정보(heidisql�
 var queryExecute = function(sql,callback){
 
     var connection = mysql.createConnection(connInfo);
+    console.log("1");
     connection.connect();
+    console.log("2");
     connection.query(sql,callback);
+    console.log("3");
     connection.end();
+    console.log("4");
 };
 
 var send200 = function(response,str){
@@ -77,19 +83,12 @@ var send200 = function(response,str){
 
 var postMethods = {};
 
-postMethods.organizationList = function(res, post){
-    var sql="Select * from myGive.organizationList WHERE userNum=3";
-    queryExecute(sql,function (error, results, fields) {
+postMethods.organizationList = function(res){
+    var sql="SELECT * from myGive.Contributor WHERE userNum="+userNum+";";
+    console.log("0");
+    queryExecute(sql,function (error) {
         if (error) throw error;
         var returnStr = '';
-        send200(res,returnStr)
+        send200(res,returnStr);
     });
 }
-
-postMethods.save_leader = function(res,post){
-    //var returnStr = JSON.stringify(post);
-
-    var returnStr = '<html><script>document.location.href="next.html";</script></html>';
-    send200(res,returnStr);
-};
-
