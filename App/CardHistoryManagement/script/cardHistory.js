@@ -18,5 +18,8 @@ $(document).ready(function(){
         $('#popupContent').css('visibility', 'hidden');
         $('#popupBackground').css('visibility', 'hidden');
     })
+    $('.receipt').click(function(){
+        receipt1.css('visibility', 'visible');
+    })
    
 })

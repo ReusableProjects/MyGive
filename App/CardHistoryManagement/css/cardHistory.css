@@ -267,7 +267,7 @@
   color: blue;
 }
 #historyPopup .historyLiRight {
-  margin-top: -180px;
+  margin-top: -30px;
   margin-left: 55%;
   display: flex;
 }
@@ -282,7 +282,8 @@
   width: fit-content;
   box-shadow: 3px 3px 3px rgb(207, 207, 207);
 }
-#historyPopup .organizationName {
+#historyPopup .organizationName,
+#historyPopup .donatorNickname {
   font-size: 15px;
   margin-top: -3%;
 }
