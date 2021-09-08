@@ -1,12 +1,7 @@
 $(document).ready(function(){
         //테이블에 요청 전송
         function send(){
-            console.log("ss");
-            var param = {
-                
-            };
-            $.post('/organizationList',param);
-              console.log("s");
+            $.post('/organizationList');
         };
         send();
     var homepageFlag=false;
