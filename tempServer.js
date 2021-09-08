@@ -1,16 +1,19 @@
 var http = require('http');
-var fs = require('fs');
-var mysql = require('mysql');
 var url=require('url');
-var userNum=3;
-var app = http.createServer(function(request,response){
-
+var fs=require('fs');
+var querystring = require('querystring'); 
+var server = http.createServer(function(request,response){
+    console.log('--- log start ---');
+    var parsedUrl = url.parse(request.url, true);//업데이트로 url api 안쓰니까  WHATWG URL API로 변경
+    console.log(parsedUrl);
+    var pathName=parsedUrl.pathname;
+    console.log('--- log end ---');
 
     if (request.method == 'GET') { //get으로 전달된거면 이부분 실행
-        if(request.url == '/'){
+        if(pathName == '/'){
 
-            url = '/App/PostManagement/html/index.html';  //기본적으로 index.html이 실행됨
-        }else if(request.url == '/favicon.ico'){
+            url = '/html/index.html';  //기본적으로 index.html이 실행됨
+        }else if(pathName == '/favicon.ico'){
             response.writeHead(404); //바로가기 아이콘이 없으면 404 리턴
             response.end();
             return;
@@ -23,55 +26,67 @@ var app = http.createServer(function(request,response){
         return;
     }
 
-    if (request.method == 'POST') { //POST으로 전달된거면 이부분 실행
+    if (request.method == 'POST') { 
         var body = '';
 
-        request.on('data', function (data) { //post로 전달된 데이터가 있으면 body에 쌓는다
+        request.on('data', function (data) { //post로 전달된 데이터가 있으면 body에 차곡차곡 쌓아라
             body += data;
 
             if (body.length > 1e6)
-                request.destroy();
+                request.connection.destroy();
         });
 
-        request.on('end', function () { //body로 들어온 데이터를 가공하여 객체화시킴
-            if(body!='')
-            { 
-                var text = request.url.split('/');
-                var method = text[1];
-            }
+        request.on('end', function () { //body로 들어온 데이터를 가공하여 뚝딱뚝딱해서 객체화시킴
+            var post = qs.parse(body); //ex) 투표에서 찬성이 들어왔으면 객체화하여 출력
+            console.dir(post);
+
+            var text = request.url.split('/');
+            var method = text[1];
+        
             if(typeof(postMethods[method]) == 'undefined'){ //request.url이 정의되어 있지 않으면
                 response.writeHead(404); //404에러 출력
                 response.end();
                 return;
             }else{
-                console.dir(postMethods); //request.url이 존재하면 postMethods 실행
+                console.dir(postMethods); //request.url이 존재하면 postMethods 실행하라
                 postMethods[method](response,post);//post값 전달하는 과정
             }
+
         });
     }
-
 });
-app.listen(5500); //localhost:5500으로 서버에 접속. 들을 준비가 되어있지만 웹 접속 포트 바꿀 경우 같이 바꿔줘야한다
+server.listen(5500, function(){
+    console.log('Server is running...');
+}); //localhost:5500으로 서버에 접속. 들을 준비가 되어있지만 웹 접속 포트 바꿀 경우 같이 바꿔줘야한다
 
-
-var connInfo = {//더미로 넣은 계정이 아닌 mysql계정정보(heidisql접속정보와 같다)
+var connInfoMyGiveDB = {
     host     : '%',   
     port     : '3307',
     user     : 'myGive',       
     password : 'myGive',     
     database : 'myGive'    
 };
+var connInfoKBbankDB = {
+    host     : '%',   
+    port     : '3307',
+    user     : 'myGive',       
+    password : 'myGive',     
+    database : 'KBbank'    
+};
 
-var queryExecute = function(sql,callback){
+var queryExecuteToMyGive = function(sql,callback){
 
-    var connection = mysql.createConnection(connInfo);
-    console.log("1");
+    var connection = mysql.createConnection(connInfoMyGiveDB);
     connection.connect();
-    console.log("2");
     connection.query(sql,callback);
-    console.log("3");
     connection.end();
-    console.log("4");
+};
+var queryExecuteToKBbank = function(sql,callback){
+
+    var connection = mysql.createConnection(connInfoKBbankDB);
+    connection.connect();
+    connection.query(sql,callback);
+    connection.end();
 };
 
 var send200 = function(response,str){
@@ -82,13 +97,11 @@ var send200 = function(response,str){
 };
 
 var postMethods = {};
-
-postMethods.organizationList = function(res){
-    var sql="SELECT * from myGive.Contributor WHERE userNum="+userNum+";";
-    console.log("0");
-    queryExecute(sql,function (error) {
+postMethods.organizationList = function(res, post){
+    var sql="SELECT * from myGive.Contributor WHERE userNum='"+userNum+"'";
+    queryExecuteToMyGive(sql,function (error) {
         if (error) throw error;
         var returnStr = '';
-        send200(res,returnStr);
+        send200(res,returnStr)
     });
 }
