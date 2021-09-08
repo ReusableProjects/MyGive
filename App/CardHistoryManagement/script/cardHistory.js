@@ -1,5 +1,6 @@
 $(document).ready(function(){
     var homepageFlag=false;
+    var certificationFlag=false;
     $('.homepage').click(function(){
         homepageFlag=true;
         window.open($(this).attr('data')).setTimeout(function(){
@@ -17,9 +18,27 @@ $(document).ready(function(){
     $('#historyPopup #popupBackground, #quit').click(function(){
         $('#popupContent').css('visibility', 'hidden');
         $('#popupBackground').css('visibility', 'hidden');
+        $('#certificationImg').css('visibility', 'hidden');
     })
     $('.receipt').click(function(){
-        receipt1.css('visibility', 'visible');
+        $('#certificationImg').attr('src', $(this).attr('data'));
+        $('#certificationImg').css('visibility', 'visible');
+        certificationFlag=true;
+        setTimeout(function(){
+            certificationFlag=false;
+        }, 10);
+    })
+    $('.photo').click(function(){
+        $('#certificationImg').attr('src', $(this).attr('data'));
+        $('#certificationImg').css('visibility', 'visible');
+        certificationFlag=true;
+        setTimeout(function(){
+            certificationFlag=false;
+        }, 10);
+    })
+    $('#popupContent').click(function(){
+        if(certificationFlag==false)
+            $('#certificationImg').css('visibility', 'hidden');
     })
    
 })
