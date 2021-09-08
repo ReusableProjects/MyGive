@@ -1,4 +1,3 @@
-// 필요한 것들을 넣어줄것
 var http = require('http');
 var fs = require('fs');
 var qs = require('querystring');
@@ -49,10 +48,6 @@ var app = http.createServer(function(request,response){
                 console.dir(postMethods); //request.url이 존재하면 postMethods 실행하라
                 postMethods[method](response,post);//post값 전달하는 과정
             }
-
-
-
-            // use post['blah'], etc.
         });
     }
 
@@ -63,9 +58,9 @@ app.listen(3000); //localhost:80으로 서버에 접속. 자신은 3000을 들�
 var connInfo = {
     host     : 'localhost',   
     port     : '3307',
-    user     : 'roll',       
+    user     : 'myGive',       
     password : '1234',     
-    database : 'rollingrole'    
+    database : 'myGive'    
 };
 
 var queryExecute = function(sql,callback){
@@ -97,6 +92,14 @@ var getData = function(param,callback){
 
 var postMethods = {};
 
+postMethods.organizationList = function(res, post){
+    var sql="Select * from myGive.organizationList WHERE userNum=3";
+    queryExecute(sql,function (error, results, fields) {
+        if (error) throw error;
+        var returnStr = '';
+        send200(res,returnStr)
+    });
+}
 
 postMethods.save_leader = function(res,post){
     //var returnStr = JSON.stringify(post);
