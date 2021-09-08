@@ -180,8 +180,8 @@
   visibility: hidden;
 }
 #historyPopup #popupContent {
-  position: relative;
-  top: -4570px;
+  position: fixed;
+  top: 100px;
   background-color: #fffef9;
   width: 50%;
   min-height: 400px;
@@ -257,14 +257,15 @@
 }
 #historyPopup .historyLiCenter {
   margin-top: -110px;
-  margin-left: 35%;
   display: flex;
 }
 #historyPopup #minusHistory .historyLiCenter {
   color: red;
+  margin-left: 35%;
 }
 #historyPopup #plusHistory .historyLiCenter {
   color: blue;
+  margin-left: 78%;
 }
 #historyPopup .historyLiRight {
   margin-top: -30px;
@@ -286,4 +287,16 @@
 #historyPopup .donatorNickname {
   font-size: 15px;
   margin-top: -3%;
+}
+#historyPopup #certificationImg {
+  position: fixed;
+  visibility: hidden;
+  margin-top: -500px;
+  z-index: 100000;
+  width: 400px;
+  height: 500px;
+  max-width: 400px;
+  max-height: 500px;
+  margin-left: 12%;
+  box-shadow: 5px 5px 100px rgb(245, 249, 255);
 }
