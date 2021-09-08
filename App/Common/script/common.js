@@ -9,14 +9,14 @@ $(document).ready(function(){
         window.location.href="../../MemberManagement/html/login.html";
     });
     $('#headerWrap #logo').click(function(){
-        window.location.href="../../PostManagement/html/index.html";
+        window.location.href="../../PostManagement/html/home.html";
     });
     $('#headerWrap #title').click(function(){
-        window.location.href="../../PostManagement/html/index.html";
+        window.location.href="../../PostManagement/html/home.html";
     });
 
     $('#headerWrap #homeTab').click(function(){
-        window.location.href="../../PostManagement/html/index.html";
+        window.location.href="../../PostManagement/html/home.html";
     });
     $('#headerWrap #introduceTab').click(function(){
         window.location.href="../../PostManagement/html/introduce.html";
@@ -25,7 +25,7 @@ $(document).ready(function(){
         window.location.href="../../PostManagement/html/donate.html";
     });
     $('#headerWrap #historyTab').click(function(){
-        window.location.href="../../CardHistoryManagement/html/history.html";
+        window.location.href="../../CardHistoryManagement/html/cardHistory.html";
     });
     var popup=false;
     $('#headerWrap #moreTab').hover(function(){
