@@ -101,11 +101,13 @@
   padding: 2px 5px;
 }
 #organizationHistoryDiv .homepage {
+  position: Relative;
   font-size: 15px;
   background-color: white;
   border-radius: 30px;
   padding: 3px 50px;
   margin-top: -5px;
+  z-index: 1000;
 }
 #organizationHistoryDiv .homepage:hover {
   background: #ff161656;
@@ -166,4 +168,121 @@
 }
 #orderedHistoryDiv .organizationName {
   font-size: 20px;
+}
+#historyPopup #popupBackground {
+  position: relative;
+  top: -2500px;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  min-height: 3000px;
+  z-index: 100000;
+  margin-bottom: 0%;
+  visibility: hidden;
+}
+#historyPopup #popupContent {
+  position: relative;
+  top: -4570px;
+  background-color: #fffef9;
+  width: 50%;
+  min-height: 400px;
+  z-index: 100001;
+  margin-bottom: 0%;
+  visibility: hidden;
+  border-radius: 2%;
+  margin-left: 25%;
+  max-height: 540px;
+}
+#historyPopup #quit {
+  position: relative;
+  font-size: 25px;
+  float: right;
+  margin-right: 50px;
+}
+#historyPopup .popupTitle {
+  font-size: 18px;
+  text-align: left;
+  margin-left: 10%;
+  font-weight: bold;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgb(255, 202, 105);
+  margin-top: 10px;
+}
+#historyPopup hr {
+  width: 80%;
+  height: 1px;
+}
+#historyPopup select {
+  margin-left: 10%;
+  font-size: 12px;
+  padding: 3px;
+  background-color: transparent;
+  border: 1px solid rgba(17, 0, 0, 0.51);
+  box-shadow: 1px 1px 1px rgba(65, 6, 6, 0.462);
+  border-radius: 5px;
+}
+#historyPopup #minusHistory {
+  max-height: 150px;
+}
+#historyPopup ul {
+  list-style-image: url("../image/cardHistoryListStyle.png");
+  margin-left: 8%;
+  margin-top: 5px;
+  min-width: 300px;
+  max-height: 150px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+#historyPopup ul::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+#historyPopup li {
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-bottom: 50px;
+  min-height: 80px;
+  width: 75%;
+  line-height: 2px;
+  border: 10px double rgba(77, 6, 6, 0.324);
+  background-color: white;
+  margin-left: 30px;
+}
+#historyPopup .historyLiLeft {
+  margin-left: 3%;
+  margin-top: -20px;
+  min-height: 100px;
+}
+#historyPopup .historyLiCenter {
+  margin-top: -110px;
+  margin-left: 35%;
+  display: flex;
+}
+#historyPopup #minusHistory .historyLiCenter {
+  color: red;
+}
+#historyPopup #plusHistory .historyLiCenter {
+  color: blue;
+}
+#historyPopup .historyLiRight {
+  margin-top: -180px;
+  margin-left: 55%;
+  display: flex;
+}
+#historyPopup .receipt,
+#historyPopup .photo {
+  margin-left: 10px;
+  border-radius: 10px;
+  background-color: rgb(255, 247, 209);
+  padding: 11px 10px;
+  min-width: 70px;
+  text-align: center;
+  width: fit-content;
+  box-shadow: 3px 3px 3px rgb(207, 207, 207);
+}
+#historyPopup .organizationName {
+  font-size: 15px;
+  margin-top: -3%;
 }
