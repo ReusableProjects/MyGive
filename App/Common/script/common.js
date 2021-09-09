@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    //상단 메뉴 등 App폴더 내의 모든 페이지들에 공통적으로 적용되는 js를 모아두었습니다
     $('#headerWrap #loginLetter').hover(function(){
         $('#loginLetter').css('color', 'gray');
     });
