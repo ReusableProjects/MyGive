@@ -242,9 +242,10 @@
         </div>
         <h id="copyright">©2021 by My Give produced by Reusable Projects</h>
     </section>
+    <!--기업카드 클릭시 뜨는 팝업창에 관한 div입니다-->
     <div id="historyPopup">
-        <div id="popupBackground"></div>
-        <div id="popupContent">
+        <div id="popupBackground"></div><!--팝업창이 뜰 떄 바탕에 깔리는 검은 화면입니다-->
+        <div id="popupContent"><!--팝업창 본체입니다-->
             <p id="quit">X</p><br/>
             <p id="minusTitle" class="popupTitle">출금 내역</p>
             <hr size="1" noshade/>
@@ -263,7 +264,7 @@
                     <p class="historyLiGroup money">-50,000</p>
                     <p class="historyLiGroup won">원</p><br/>
                 </div>
-                 <div class="historyLiRight">
+                 <div class="historyLiRight"> <!--영수증 인증 또는 사진 인증 클릭시 해당 출금의 인증내역 사진이 뜹니다-->
                      <p class="historyLiGroup receipt" data="../image/receipt1.png">영수증 인증</p>
                      <p class="historyLiGroup photo" data="../image/photo1.png">사진 인증</p><br/>
                  </div>
@@ -325,6 +326,7 @@
                 </div>
              </li>
          </ul>
+         <!--기부자들이 해당 기업의 카드에 기부한 내역입니다-->
             <p id="plusTitle" class="popupTitle">입금 내역</p>
             <hr size="1" noshade/>
             <select id="plusSelect">
@@ -336,6 +338,7 @@
              <li>
                  <div class="historyLiLeft">
                      <p class="historyLiGroup donatorNickname"><b>기부를 하자</b></p><br/>
+                     <!--이와같이 실명이 아닌 닉네임으로 기부자의 이름이 표시됩니다-->
                      <p class="historyLiGroup dateTime">2021/9/6 17:50:00</p>
                  </div>
                  <div class="historyLiCenter">
