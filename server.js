@@ -1,3 +1,4 @@
+// nodejs를 통해 서버를 돌린다
 var http = require('http');
 var url=require('url');
 var fs=require('fs');
@@ -55,18 +56,19 @@ var server = http.createServer(function(request,response){
         });
     }
 });
+
 server.listen(5500, function(){
     console.log('Server is running...');
-}); //localhost:5500으로 서버에 접속. 들을 준비가 되어있지만 웹 접속 포트 바꿀 경우 같이 바꿔줘야한다
+}); //localhost:5500으로 서버에 접속합니다
 
-var connInfoMyGiveDB = {
+var connInfoMyGiveDB = {//myGive측 db에 접속하기 위한 연결정보입니다
     host     : '%',   
     port     : '3307',
     user     : 'myGive',       
     password : 'myGive',     
     database : 'myGive'    
 };
-var connInfoKBbankDB = {
+var connInfoKBbankDB = {//은행측 db에 접속하기 위한 연결정보입니다
     host     : '%',   
     port     : '3307',
     user     : 'myGive',       
@@ -74,22 +76,22 @@ var connInfoKBbankDB = {
     database : 'KBbank'    
 };
 
-var queryExecuteToMyGive = function(sql,callback){
+var queryExecuteToMyGive = function(sql,callback){//2가지 타입의 queryExecute를 통해 원하는 db에 접근합니다
 
     var connection = mysql.createConnection(connInfoMyGiveDB);
-    connection.connect();
-    connection.query(sql,callback);
-    connection.end();
+    connection.connect();//myGivedb에 연결하고
+    connection.query(sql,callback);//sql문 요청을 전달합니다
+    connection.end();//연결을 끊어줍니다
 };
 var queryExecuteToKBbank = function(sql,callback){
 
     var connection = mysql.createConnection(connInfoKBbankDB);
-    connection.connect();
-    connection.query(sql,callback);
+    connection.connect();//구조는 같지만 이번엔 은행측db에 연결합니다
+    connection.query(sql,callback);//은행api를 사용하기 위해선 사업자등록이 필요했기에 임시로 대체했습니다
     connection.end();
 };
 
-var send200 = function(response,str){
+var send200 = function(response,str){//에러가 났을 경우입니다
 
     response.writeHead(200);
     response.write(str);
@@ -98,7 +100,7 @@ var send200 = function(response,str){
 
 var postMethods = {};
 postMethods.organizationList = function(res, post){
-    var sql="SELECT * from myGive.Contributor WHERE userNum='"+userNum+"'";
+    var sql="SELECT * from myGive.Contributor WHERE userNum='"+userNum+"'";//myGive의 Contributor테이블로부터 기부자가 현재 접속자일때의 정보를 조회합니다
     queryExecuteToMyGive(sql,function (error) {
         if (error) throw error;
         var returnStr = '';
