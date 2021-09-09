@@ -18,6 +18,14 @@ $(document).ready(function(){
         {
             $('#popupBackground').css('visibility', 'visible');
             $('#popupContent').css('visibility', 'visible');
+            function sendCardHistory(){
+                var param = {
+                    organizationCardNum : $(this).attr('data')
+                };
+                $.post('/organizationMinusHistory',param);
+                $.post('/organizationPlusHistory',param);
+            }
+            sendCardHistory();
         }
     })
     $('#historyPopup #popupBackground, #quit').click(function(){//팝업창의 x버튼 또는 검은 뒷배경 클릭시 팝업창이 사라집니다
