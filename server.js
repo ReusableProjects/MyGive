@@ -100,8 +100,24 @@ var send200 = function(response,str){//에러가 났을 경우입니다
 
 var postMethods = {};
 postMethods.organizationList = function(res, post){
-    var sql="SELECT * from myGive.Contributor WHERE userNum='"+userNum+"'";//myGive의 Contributor테이블로부터 기부자가 현재 접속자일때의 정보를 조회합니다
+    var sql="SELECT contributorList from myGive.Contributor WHERE userNum='"+userNum+"'";//myGive의 Contributor테이블로부터 기부자가 현재 접속자일때의 정보를 조회합니다
     queryExecuteToMyGive(sql,function (error) {
+        if (error) throw error;
+        var returnStr = '';
+        send200(res,returnStr)
+    });
+}
+postMethods.organizationMinusHistory = function(res, post){
+    var sql="SELECT * from KBbank.CardHistory WHERE cardNum='"+post.organizationCardNum+"'&&price<0";
+    queryExecuteToKBbank(sql,function (error) {
+        if (error) throw error;
+        var returnStr = '';
+        send200(res,returnStr)
+    });
+}
+postMethods.organizationPlusHistory = function(res, post){
+    var sql="SELECT * from KBbank.CardHistory WHERE cardNum='"+post.organizationCardNum+"'&&price>=0";
+    queryExecuteToKBbank(sql,function (error) {
         if (error) throw error;
         var returnStr = '';
         send200(res,returnStr)

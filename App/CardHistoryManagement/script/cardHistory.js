@@ -18,6 +18,14 @@ $(document).ready(function(){
         {
             $('#popupBackground').css('visibility', 'visible');
             $('#popupContent').css('visibility', 'visible');
+            function sendCardHistory(){
+                var param = {
+                    organizationCardNum : $(this).attr('data')
+                };
+                $.post('/organizationMinusHistory',param);
+                $.post('/organizationPlusHistory',param);
+            }
+            sendCardHistory();
         }
     })
     $('#historyPopup #popupBackground, #quit').click(function(){
