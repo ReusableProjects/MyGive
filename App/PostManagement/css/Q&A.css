@@ -1,0 +1,75 @@
+#contentWrap {
+  margin-top: 40px;
+  font-family: "바탕, Times, Times New Roman, Georgia, serif";
+  font-size: 40px;
+  text-align: center;
+}
+#contentWrap > section {
+  margin-left: 15%;
+  line-height: 27px;
+}
+#contentWrap #Inner_1 {
+  width: 100%;
+  height: 50%;
+  margin-top: 80px;
+}
+
+#contentWrap #Inner_2 {
+  width: 100%;
+  height: 50%;
+  margin-top: 50px;
+}
+#contentWrap #Inner_1 section {
+  float: left;
+  width: 28%;
+  height: 50%;
+  text-align: left;
+}
+#contentWrap #Inner_2 section {
+  float: left;
+  width: 28%;
+  height: 50%;
+  text-align: left;
+}
+#contentWrap #Inner_1 #inner1,
+#inner3 {
+  margin-left: 100px;
+}
+
+#contentWrap #Inner_1 #inner2,
+#inner4 {
+  margin-left: 80px;
+}
+
+#contentWrap #inner2 > h6,
+#inner3 > h6 {
+  margin-bottom: 24px;
+}
+#contentWrap .QTitle {
+  font-size: 22px;
+  font-weight: 500;
+}
+#contentWrap .QSpan {
+  font-size: 15px;
+  text-align: left;
+  font-family: sans-serif;
+  padding-right: 5px;
+}
+
+#midWrap {
+  float: left;
+  width: 100%;
+  margin-left: 100px;
+  margin-bottom: 100px;
+}
+
+#midWrap #faq {
+  width: 600px;
+  height: 600px;
+}
+
+#midWrap #heart {
+  margin-left: 200px;
+  width: 600px;
+  height: 600px;
+}

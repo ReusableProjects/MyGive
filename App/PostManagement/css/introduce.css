@@ -9,9 +9,10 @@
 #growthBackgroundDiv #dataAnalysis {
   width: 500px;
   margin-left: 15%;
+  margin-top: -5%;
 }
 #growthBackgroundDiv #ExplainDiv {
-  margin-top: -25%;
+  margin-top: -27%;
   margin-left: 55%;
 }
 #growthBackgroundDiv #ExplainText {

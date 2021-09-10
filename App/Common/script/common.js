@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    //상단 메뉴 등 App폴더 내의 모든 페이지들에 공통적으로 적용되는 js를 모아두었습니다
     $('#headerWrap #loginLetter').hover(function(){
         $('#loginLetter').css('color', 'gray');
     });
@@ -9,14 +10,14 @@ $(document).ready(function(){
         window.location.href="../../MemberManagement/html/login.html";
     });
     $('#headerWrap #logo').click(function(){
-        window.location.href="../../PostManagement/html/index.html";
+        window.location.href="../../PostManagement/html/home.html";
     });
     $('#headerWrap #title').click(function(){
-        window.location.href="../../PostManagement/html/index.html";
+        window.location.href="../../PostManagement/html/home.html";
     });
 
     $('#headerWrap #homeTab').click(function(){
-        window.location.href="../../PostManagement/html/index.html";
+        window.location.href="../../PostManagement/html/home.html";
     });
     $('#headerWrap #introduceTab').click(function(){
         window.location.href="../../PostManagement/html/introduce.html";
@@ -25,7 +26,7 @@ $(document).ready(function(){
         window.location.href="../../PostManagement/html/donate.html";
     });
     $('#headerWrap #historyTab').click(function(){
-        window.location.href="../../CardHistoryManagement/html/history.html";
+        window.location.href="../../CardHistoryManagement/html/cardHistory.html";
     });
     var popup=false;
     $('#headerWrap #moreTab').hover(function(){

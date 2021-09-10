@@ -1,3 +1,5 @@
+/*App내의 모든 폴더에 공통적으로 적용되는 css를 모아두었습니다
+각 html 페이지들에는 자신의 css파일 외에도 common.css를 연결해두었습니다 */
 body {
   background-color: #fffef9;
   font-family: "Arial,Helvetica,sans-serif";
@@ -71,6 +73,7 @@ body {
   margin-top: 40px;
   min-width: 400px;
   overflow: hidden;
+  z-index: 100000;
 }
 #headerWrap #menuTab li {
   display: inline;
@@ -101,6 +104,7 @@ body {
   position: relative;
   margin-bottom: 10px;
   width: 80px;
+  box-shadow: 0px 0px 70px #fffef9;
 }
 #contentWrap {
   min-height: 1000px;

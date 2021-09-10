@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<head>
+    <meta charset= 'utf-8'/>
+    <title>My Give - history</title>
+    <link rel="stylesheet" href="../../Common/css/common.css"/>
+    <link rel="stylesheet" href="../../CardHistoryManagement/css/cardHistory.css"/>
+    <script src="https://use.fontawesome.com/releases/v5.8.0/js/all.js"></script>
+    <script src="http://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="../../Common/script/common.js"></script>
+    <script src="../../CardHistoryManagement/script/cardHistory.js"></script>
+</head>
+<body>
+    <section id="headerWrap">
+        <div id="loginBox">
+            <img id="loginProfile" src="../../Common/image/profile.png" alt="profile"/>
+            <h id="loginLetter">phantomoh98</h>
+        </div>
+        <hr id="headline" size="1.5" noshade/>
+        <div id="titleBox">
+            <img id="logo" src="../../Common/image/logo.png" alt="logo"/>
+            <h id="title"> 내 손안의 기부 내역 플랫폼 <span>My Give</span></h>
+            <nav id="menuTab">
+                <ul>
+                    <li id="homeTab">메인</li>
+                    <li id="introduceTab">소개</li>
+                    <li id="donateTab">기부하기</li>
+                    <li id="historyTab">기부내역</li>
+                    <li id="hiddenTab">
+                        <ul id="moreList">
+                            <li id="moreTab">더보기</li><br/><br/>
+                            <li id="goodsTab" class="popupMenu">굿즈</li><br/><br/>
+                            <li id="relayTab" class="popupMenu">기부 릴레이</li><br/><br/>
+                            <li id="FAQTab" class="popupMenu">FAQ</li><br/><br/>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+    <section id="contentWrap">
+           <div id="helloCardHistoryDiv">
+               <p id="historyTitle" class="middleTitle">기부 내역 관리</p>
+               <img id="helloCardHistoryImg" src="../image/helloCardHistoryImg.png" alt="helloCardHistoryImg"/>
+           </div>
+           <div id="organizationHistoryDiv" class="historyDivClass">
+               <p id="organizationHistoryTitle" class="historyTitle">Organizations</p>
+               <hr size="1.5" noshade/>
+            <ul>
+                <li data='1234567812345678'><!--myGive에서 해당 단체에 지급한 카드번호-->
+                    <div class="historyLiTop">
+                        <img src="../image/organization1.png" alt="organization" class="historyLiGroup organizationImg">
+                    </div>
+                    <div class="historyLiCenter">
+                        <p class="historyLiGroup organizationName"><b>적십자</b></p>
+                        <p class="historyLiGroup status status5">매우 성실</p><br/>
+                        <p class="historyLiGroup homepage" data="https://www.redcross.or.kr/main/main.do">홈페이지</p><br/>
+                    </div>
+                    <div class="historyLiBottom">
+                        <p class="historyLiGroup contact">TEL) 1577-8179<br/>
+                            FAX) 02-6262-3100<br/>
+                            E-mail) bloodadmin@naver.com</p>
+                    </div>
+                </li>
+                <li data='3241457678153628'>
+                    <div class="historyLiTop">
+                    <img src="../image/organization2.png" alt="organization" class="historyLiGroup organizationImg">
+                </div>
+                <div class="historyLiCenter">
+                    <p class="historyLiGroup organizationName"><b>관악구청</b></p>
+                    <p class="historyLiGroup status status3">보통</p><br/>
+                    <p class="historyLiGroup homepage" data="http://www.gwanak.go.kr/site/gwanak/main.do">홈페이지</p><br/>
+                </div>
+                <div class="historyLiBottom">
+                    <p class="historyLiGroup contact">TEL) 02-879-5000<br/>
+                        FAX) 02-879-7802<br/>
+                        E-mail) gwanak@naver.com</p>
+                </div>
+            </li>
+                <li data='5612123874345678'>
+                    <div class="historyLiTop">
+                    <img src="../image/organization3.png" alt="organization" class="historyLiGroup organizationImg">
+                </div>
+                <div class="historyLiCenter">
+                    <p class="historyLiGroup organizationName"><b>바른 유치원</b></p>
+                    <p class="historyLiGroup status status4">성실</p><br/>
+                    <p class="historyLiGroup homepage" data=" https://cafe.naver.com/bareun1166">홈페이지</p><br/>
+                </div>
+                <div class="historyLiBottom">
+                    <p class="historyLiGroup contact">TEL) 043-716-1166<br/>
+                        FAX) 02-6262-3100<br/>
+                        E-mail) barunkinder@naber.com</p>
+                </div>
+            </li>
+                <li data='8134567423125678'>
+                    <div class="historyLiTop">
+                        <img src="../image/organization4.png" alt="organization" class="historyLiGroup organizationImg">
+                    </div>
+                    <div class="historyLiCenter">
+                        <p class="historyLiGroup organizationName"><b>유령 회사</b></p>
+                        <p class="historyLiGroup status status1">매우 불성실</p><br/>
+                        <p class="historyLiGroup homepage" data="https://ko.wikipedia.org/wiki/%EC%A0%84%EA%B8%B0%ED%86%B5%EC%8B%A0%EA%B8%88%EC%9C%B5%EC%82%AC%EA%B8%B0">홈페이지</p><br/>
+                    </div>
+                    <div class="historyLiBottom">
+                        <p class="historyLiGroup contact">TEL) 02-4242-8282<br/>
+                            FAX) 02-4242-4282<br/>
+                            E-mail) voicephishing@gmail.com</p>
+                    </div>
+                </li>
+                <li data='5678454261312378'>
+                    <div class="historyLiTop">
+                    <img src="../image/organization5.png" alt="organization" class="historyLiGroup organizationImg">
+                </div>
+                <div class="historyLiCenter">
+                    <p class="historyLiGroup organizationName"><b>동작구 보건소</b></p>
+                    <p class="historyLiGroup status status5">매우 성실</p><br/>
+                    <p class="historyLiGroup homepage" data="https://www.dongjak.go.kr/healthcare/main/main.do">홈페이지</p><br/>
+                </div>
+                <div class="historyLiBottom">
+                    <p class="historyLiGroup contact">TEL) 02-820-1423<br/>
+                        FAX) 02-820-9519<br/>
+                        E-mail) dongjackhealth@naver.com</p>
+                </div>
+                </li >
+                <li data='1812323455674678'>
+                    <div class="historyLiTop">
+                        <img src="../image/organization6.png" alt="organization" class="historyLiGroup organizationImg">
+                    </div>
+                    <div class="historyLiCenter">
+                        <p class="historyLiGroup organizationName"><b>비둘기 협회</b></p>
+                        <p class="historyLiGroup status status2">불성실</p><br/>
+                        <p class="historyLiGroup homepage" data="https://www.google.com/search?q=%EB%B9%84%EB%91%98%EA%B8%B0%EB%A5%BC+%EA%B7%BC%EC%A0%88%ED%95%98%EC%9E%90&ei=ZXQ4YdOmE4uQr7wPs_2RwAo&oq=%EB%B9%84%EB%91%98%EA%B8%B0%EB%A5%BC+%EA%B7%BC%EC%A0%88%ED%95%98%EC%9E%90&gs_lcp=Cgdnd3Mtd2l6EAMyBQghEKABMgUIIRCgAToLCAAQgAQQsQMQgwE6CAgAEIAEELEDOgUIABCABDoECAAQQzoECAAQHkoECEEYAFCbJ1i-NmDLN2gCcAB4A4ABpgKIAe8RkgEFMS45LjSYAQCgAQHAAQE&sclient=gws-wiz&ved=0ahUKEwiT7bvw-u7yAhULyIsBHbN-BKgQ4dUDCA4&uact=5">홈페이지</p><br/>
+                    </div>
+                    <div class="historyLiBottom">
+                        <p class="historyLiGroup contact">TEL) 02-9999-9999<br/>
+                            FAX) 02-9999-0099<br/>
+                            E-mail) pigeon999@naver.com</p>
+                    </div>
+                </li>
+                <li data='7465123458123457'>
+                    <div class="historyLiTop">
+                    <img src="../image/organization7.png" alt="organization" class="historyLiGroup organizationImg">
+                </div>
+                <div class="historyLiCenter">
+                    <p class="historyLiGroup organizationName"><b>숭실대학교</b></p>
+                    <p class="historyLiGroup status status5">매우 성실</p><br/>
+                    <p class="historyLiGroup homepage" data="https://ssu.ac.kr/">홈페이지</p><br/>
+                </div>
+                <div class="historyLiBottom">
+                    <p class="historyLiGroup contact">TEL) 02-820-0114<br/>
+                        FAX) 02-815-9998<br/>
+                        E-mail) soongsil1897@naver.com</p>
+                </div>
+                </li>
+            </ul>
+           </div>
+           <div id="orderedHistoryDiv" class="historyDivClass">
+               <p id="orderedHistoryTitle" class="historyTitle">My Donations</p>
+               <hr size="1.5" noshade/>
+               <select id="orderedHistorySelect">
+                   <option>전체</option>
+                   <option>한달</option>
+                   <option>일년</option>
+               </select>
+            <ul>
+                <li>
+                    <div class="historyLiLeft">
+                        <p class="historyLiGroup organizationName"><b>숭실대학교</b></p><br/>
+                        <p class="historyLiGroup dateTime">2021-04-29 11:21:02</p>
+                    </div>
+                    <div class="historyLiRight">
+                        <p class="historyLiGroup money">+100,000</p>
+                        <p class="historyLiGroup won">원</p><br/>
+                    </div>
+                </li>
+                <li>                    
+                    <div class="historyLiLeft">
+                        <p class="historyLiGroup organizationName"><b>비둘기 협회</b></p><br/>
+                        <p class="historyLiGroup dateTime">2020-12-04 10:43:58</p>
+                    </div>
+                    <div class="historyLiRight">
+                        <p class="historyLiGroup money">+10,000</p>
+                        <p class="historyLiGroup won">원</p><br/>
+                    </div></li>
+                <li>
+                    <div class="historyLiLeft">
+                        <p class="historyLiGroup organizationName"><b>동작구 보건소</b></p><br/>
+                        <p class="historyLiGroup dateTime">2020-07-21 08:20:01</p>
+                    </div>
+                    <div class="historyLiRight">
+                        <p class="historyLiGroup money">+1,000</p>
+                        <p class="historyLiGroup won">원</p><br/>
+                    </div>
+                </li>
+                <li>
+                    <div class="historyLiLeft">
+                        <p class="historyLiGroup organizationName"><b>유령회사</b></p><br/>
+                        <p class="historyLiGroup dateTime">2019-10-01 10:25:00</p>
+                    </div>
+                    <div class="historyLiRight">
+                        <p class="historyLiGroup money">+500</p>
+                        <p class="historyLiGroup won">원</p><br/>
+                    </div>
+                </li>
+                <li>
+                    <div class="historyLiLeft">
+                        <p class="historyLiGroup organizationName"><b>바른 유치원</b></p><br/>
+                        <p class="historyLiGroup dateTime">2019-08-14 06:15:20</p>
+                    </div>
+                    <div class="historyLiRight">
+                        <p class="historyLiGroup money">+12,000</p>
+                        <p class="historyLiGroup won">원</p><br/>
+                    </div>
+                </li>
+                <li>
+                    <div class="historyLiLeft">
+                        <p class="historyLiGroup organizationName"><b>관악구청</b></p><br/>
+                        <p class="historyLiGroup dateTime">2019-03-20 12:34:20</p>
+                    </div>
+                    <div class="historyLiRight">
+                        <p class="historyLiGroup money">+50,000</p>
+                        <p class="historyLiGroup won">원</p><br/>
+                    </div>
+                </li>
+                <li>
+                    <div class="historyLiLeft">
+                        <p class="historyLiGroup organizationName"><b>적십자</b></p><br/>
+                        <p class="historyLiGroup dateTime">2018-12-30 09:02:34</p>
+                    </div>
+                    <div class="historyLiRight">
+                        <p class="historyLiGroup money">+100,000</p>
+                        <p class="historyLiGroup won">원</p><br/>
+                    </div>
+                </li>
+            </ul>
+           </div>
+    </section>
+    <section id="footerWrap">
+        <div id="sns">
+            <img id="facebookIcon" class="snsIcon" src="../../Common/image/facebookIcon.png" alt="facebookIcon"/>
+            <img id="twitterIcon" class="snsIcon" src="../../Common/image/twitterIcon.png" alt="twitterIcon"/>
+            <img id="instagramIcon" class="snsIcon" src="../../Common/image/instagramIcon.png" alt="instagramIcon"/><br/><br/>
+        </div>
+        <h id="copyright">©2021 by My Give produced by Reusable Projects</h>
+    </section>
+    <!--기업카드 클릭시 뜨는 팝업창에 관한 div입니다-->
+    <div id="historyPopup">
+        <div id="popupBackground"></div><!--팝업창이 뜰 떄 바탕에 깔리는 검은 화면입니다-->
+        <div id="popupContent"><!--팝업창 본체입니다-->
+            <p id="quit">X</p><br/>
+            <p id="minusTitle" class="popupTitle">출금 내역</p>
+            <hr size="1" noshade/>
+            <select id="minusSelect">
+                <option>전체</option>
+                <option>한달</option>
+                <option>일년</option>
+            </select>
+         <ul id="minusHistory">
+             <li>
+                 <div class="historyLiLeft">
+                     <p class="historyLiGroup organizationName"><b>상도 시장</b></p><br/>
+                     <p class="historyLiGroup dateTime">2021/9/6 17:50:00</p>
+                 </div>
+                 <div class="historyLiCenter">
+                    <p class="historyLiGroup money">-50,000</p>
+                    <p class="historyLiGroup won">원</p><br/>
+                </div>
+                 <div class="historyLiRight"> <!--영수증 인증 또는 사진 인증 클릭시 해당 출금의 인증내역 사진이 뜹니다-->
+                     <p class="historyLiGroup receipt" data="../image/receipt1.png">영수증 인증</p>
+                     <p class="historyLiGroup photo" data="../image/photo1.png">사진 인증</p><br/>
+                 </div>
+             </li>
+             <li>                    
+                 <div class="historyLiLeft">
+                     <p class="historyLiGroup organizationName"><b>이마트</b></p><br/>
+                     <p class="historyLiGroup dateTime">2021/9/6 17:50:00</p>
+                 </div>
+                 <div class="historyLiCenter">
+                    <p class="historyLiGroup money">-1,000,000</p>
+                    <p class="historyLiGroup won">원</p><br/>
+                </div>
+                <div class="historyLiRight">
+                    <p class="historyLiGroup receipt" data="../image/receipt2.png">영수증 인증</p>
+                    <p class="historyLiGroup photo" data="../image/photo2.png">사진 인증</p><br/>
+                </div>
+                </li>
+             <li>
+                 <div class="historyLiLeft">
+                     <p class="historyLiGroup organizationName"><b>마스크 공장</b></p><br/>
+                     <p class="historyLiGroup dateTime">2021/9/6 17:50:00</p>
+                 </div>
+                 <div class="historyLiCenter">
+                    <p class="historyLiGroup money">-100,000</p>
+                    <p class="historyLiGroup won">원</p><br/>
+                </div>
+                <div class="historyLiRight">
+                    <p class="historyLiGroup receipt" data="../image/receipt3.png">영수증 인증</p>
+                    <p class="historyLiGroup photo" data="../image/photo3.png">사진 인증</p><br/>
+                </div>
+             </li>
+             <li>
+                 <div class="historyLiLeft">
+                     <p class="historyLiGroup organizationName"><b>한솥 도시락</b></p><br/>
+                     <p class="historyLiGroup dateTime">2021/9/6 17:50:00</p>
+                 </div>
+                 <div class="historyLiCenter">
+                    <p class="historyLiGroup money">-2,000,000</p>
+                    <p class="historyLiGroup won">원</p><br/>
+                </div>
+                <div class="historyLiRight">
+                    <p class="historyLiGroup receipt" data="../image/receipt4.png">영수증 인증</p>
+                    <p class="historyLiGroup photo" data="../image/photo4.png">사진 인증</p><br/>
+                </div>
+             </li>
+             <li>
+                 <div class="historyLiLeft">
+                     <p class="historyLiGroup organizationName"><b>상도 시장</b></p><br/>
+                     <p class="historyLiGroup dateTime">2021/9/6 17:50:00</p>
+                 </div>
+                 <div class="historyLiCenter">
+                    <p class="historyLiGroup money">-250,000</p>
+                    <p class="historyLiGroup won">원</p><br/>
+                </div>
+                <div class="historyLiRight">
+                    <p class="historyLiGroup receipt" data="../image/receipt5.png">영수증 인증</p>
+                    <p class="historyLiGroup photo" data="../image/photo5.png">사진 인증</p><br/>
+                </div>
+             </li>
+         </ul>
+         <!--기부자들이 해당 기업의 카드에 기부한 내역입니다-->
+            <p id="plusTitle" class="popupTitle">입금 내역</p>
+            <hr size="1" noshade/>
+            <select id="plusSelect">
+                <option>전체</option>
+                <option>한달</option>
+                <option>일년</option>
+            </select>
+         <ul id="plusHistory">
+             <li>
+                 <div class="historyLiLeft">
+                     <p class="historyLiGroup donatorNickname"><b>기부를 하자</b></p><br/>
+                     <!--이와같이 실명이 아닌 닉네임으로 기부자의 이름이 표시됩니다-->
+                     <p class="historyLiGroup dateTime">2021/9/6 17:50:00</p>
+                 </div>
+                 <div class="historyLiCenter">
+                    <p class="historyLiGroup money">+1,000,000</p>
+                    <p class="historyLiGroup won">원</p><br/>
+                </div>
+             </li>
+             <li>                    
+                 <div class="historyLiLeft">
+                     <p class="historyLiGroup donatorNickname"><b>hoho</b></p><br/>
+                     <p class="historyLiGroup dateTime">2021/9/6 17:50:00</p>
+                 </div>
+                 <div class="historyLiCenter">
+                    <p class="historyLiGroup money">+1,000,000</p>
+                    <p class="historyLiGroup won">원</p><br/>
+                </div>
+             <li>
+                 <div class="historyLiLeft">
+                     <p class="historyLiGroup donatorNickname"><b>donate2021</b></p><br/>
+                     <p class="historyLiGroup dateTime">2021/9/6 17:50:00</p>
+                 </div>
+                 <div class="historyLiCenter">
+                    <p class="historyLiGroup money">+1,000,000</p>
+                    <p class="historyLiGroup won">원</p><br/>
+                </div>
+             </li>
+             <li>
+                 <div class="historyLiLeft">
+                     <p class="historyLiGroup donatorNickname"><b>월급받고싶다</b></p><br/>
+                     <p class="historyLiGroup dateTime">2021/9/6 17:50:00</p>
+                 </div>
+                 <div class="historyLiCenter">
+                    <p class="historyLiGroup money">+1,000,000</p>
+                    <p class="historyLiGroup won">원</p><br/>
+                </div>
+             </li>
+             <li>
+                 <div class="historyLiLeft">
+                     <p class="historyLiGroup donatorNickname"><b>giboo</b></p><br/>
+                     <p class="historyLiGroup dateTime">2021/9/6 17:50:00</p>
+                 </div>
+                 <div class="historyLiCenter">
+                    <p class="historyLiGroup money">+1,000,000</p>
+                    <p class="historyLiGroup won">원</p><br/>
+                </div>
+             </li>
+         </ul>
+         <img id="certificationImg" src="../image/receipt1.png" alt="certification"/>
+        </div>
+       </div>
+</body>
